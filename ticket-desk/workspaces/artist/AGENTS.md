@@ -21,7 +21,7 @@ You get one spec at a time from the desk. It has a ticket id, a version, must-ha
    - **Reviewer feedback:** fix exactly those points, on top of whatever is above.
    - **Reference image:** look at it with the `view_image` tool and carry its key traits into the prompt.
 3. **Generate** by running, with `exec`: `python3 ~/.openclaw/skills/tickets/comfy_gen.py --ticket <ID> --prompt "<prompt>"`. It waits for the local ComfyUI and prints JSON with the image `file` path. Never call `image_generate`.
-4. **Self-check** with the `view_image` tool. If it's obviously broken (blank, cropped, wrong subject), generate once more before submitting.
+4. **No self-check.** Never regenerate on your own; the reviewer judges the image. Go straight to submit after one successful generation.
 5. **Submit:** `submit <ID> --agent artist --result "<the prompt you used>" --artifact <absolute image path>`
 6. **Final reply** (it goes back to the desk): `T-… v<n> | submitted | file: <absolute path> | prompt: <prompt>`
 

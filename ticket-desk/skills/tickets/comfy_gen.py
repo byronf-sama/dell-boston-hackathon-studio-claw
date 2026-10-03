@@ -9,7 +9,7 @@ p = argparse.ArgumentParser()
 p.add_argument("--ticket", required=True); p.add_argument("--prompt", required=True)
 p.add_argument("--model", default=os.environ.get("DESK_MODEL", "sdxl"), choices=MODELS)
 p.add_argument("--seed", type=int, default=None); p.add_argument("--timeout", type=int, default=300)
-p.add_argument("--negative", default=os.environ.get("DESK_NEGATIVE", "text, letters, words, numbers, writing, signature, watermark, logo, jersey numbers, scoreboard, photorealistic, blurry, cropped, cut off, multiple panels"))
+p.add_argument("--negative", default=os.environ.get("DESK_NEGATIVE", "text, letters, words, numbers, writing, signature, watermark, logo, jersey numbers, scoreboard, blurry, cropped, cut off, multiple panels"))
 a = p.parse_args()
 wf_file, prompt_node = MODELS[a.model]
 wf = json.load(open(os.path.join(KIT, "workflows", wf_file)))
