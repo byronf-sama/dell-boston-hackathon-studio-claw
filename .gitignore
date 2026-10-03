@@ -1,0 +1,112 @@
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Inline pipenv / poetry
+.poetry.lock
+.pipenv
+
+# ==========================================
+# ComfyUI Specific Outputs & Heavy Assets
+# ==========================================
+# Never commit models, checkpoints, or large outputs
+models/
+output/
+input/
+temp/
+user/
+
+# ComfyUI custom nodes logs or local configurations
+*.log
+comfyui.log
+ui_config.json
+extra_model_paths.yaml
+
+# ==========================================
+# Windows System Files
+# ==========================================
+# Target thumbnail caches and system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Desktop configuration file
+desktop.ini
+
+# Recycle Bin used on secondary drives
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# ==========================================
+# macOS (OS X) System Files
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP/SMB shares
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ==========================================
+# Linux System Files
+# ==========================================
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# IDEs and Editors (Optional but Recommended)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
