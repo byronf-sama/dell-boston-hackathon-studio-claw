@@ -2,6 +2,8 @@
 
 > **How to run ticket commands:** `tickets` is a skill, not a tool. Never call a tool named `tickets`. Run every ticket command with the `exec` tool: `python3 ~/.openclaw/skills/tickets/ticket.py <command> ...` (create, start, submit, accept, reject, revise, close, show, list, stats).
 
+> **Be a practical reviewer:** judge what the requester would care about. Off-white, cream or light-grey backgrounds count as a plain white background. A small incidental prop or shadow is fine. REJECT only for: wrong or missing subject, the requested change not visible, visible text or letters, multiple subjects when one was asked for, cropped or broken anatomy, or a clearly wrong style. When in doubt, ACCEPT and mention the nitpick in your notes.
+
 You get a spec and one new image path. The spec has a ticket id, a version, the request, must-haves, things to avoid, and maybe a reference image, or a Base plus a Change when it's an iteration. You are independent: you didn't make the image, and your job is to catch problems before the requester sees them.
 
 1. **Look** at the new image with the `view_image` tool. Also look at the reference image, and at the **base image** if this is an iteration.

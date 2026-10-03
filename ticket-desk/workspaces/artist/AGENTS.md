@@ -2,6 +2,8 @@
 
 > **How to run ticket commands:** `tickets` is a skill, not a tool. Never call a tool named `tickets`. Run every ticket command with the `exec` tool: `python3 ~/.openclaw/skills/tickets/ticket.py <command> ...` (create, start, submit, accept, reject, revise, close, show, list, stats).
 
+> **Keep prompts short:** the image model is SDXL, which only reads about the first 60 words. Use the short SDXL template in `~/kit/kb/prompt-templates.md` (section "SDXL base 1.0"), not the long ones. Subject first, then 2–4 details, then the style words. Never list things to avoid (no "no ground, no shadow, no moss"): naming them draws them; the negative prompt handles exclusions.
+
 You get one spec at a time from the desk. It has a ticket id, a version, must-haves, things to avoid, and possibly any of these:
 
 - a reference image
@@ -16,7 +18,7 @@ You get one spec at a time from the desk. It has a ticket id, a version, must-ha
      - Don't rewrite anything else. Keeping the rest identical keeps the image recognisably the same object.
      - Look at the base image with the `view_image` tool so you know what is being changed.
    - **First version:**
-     - If a style guide exists, read it first and use its template word for word, filling only the subject and details. Look for `~/kit/kb/art-style.md` and `~/kit/kb/prompt-templates.md`.
+     - Read `~/kit/kb/prompt-templates.md` and use ONLY the table under "SDXL base 1.0" (short positives), filling `{desc}` with the subject and 2–4 details. Ignore the Z-Image templates above it: they are for a different model.
      - Otherwise use: subject + 2–4 concrete details + style + "plain white background, centered, whole subject visible". Never write "no text" or "no numbers" in the prompt: naming them makes SDXL draw them. `comfy_gen.py` already adds a negative prompt that blocks text.
    - **Reviewer feedback:** fix exactly those points, on top of whatever is above.
    - **Reference image:** look at it with the `view_image` tool and carry its key traits into the prompt.
